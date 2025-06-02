@@ -1,0 +1,33 @@
+@use "../global/variables" as *;
+
+#famousSection {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    @include interBold700;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.1rem; // Tamanho grande para destaque
+    font-weight: 700;
+  }
+  h2:after {
+    content: "";
+    display: block;
+    width: 250px;
+    height: 4px;
+    background: $color-tertiary; // Cor de destaque (pode ser $color-accent)
+    margin: 12px auto 0;
+    border-radius: 2px;
+  }
+
+  article {
+    padding: 20px 0;
+    // border: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

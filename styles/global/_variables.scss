@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+//Fonts
+
+@mixin comfortaa-400 {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 700;
+}
+
+@mixin interRegular400(){
+  font-family: 'Inter',sans-serif;
+  font-weight: 400;
+
+}
+@mixin interBold500(){
+  font-family: 'Inter',sans-serif;
+  font-weight: 500;
+}
+@mixin interBold600(){
+  font-family: 'Inter',sans-serif;
+  font-weight: 600;
+}
+@mixin interBold700(){
+  font-family: 'Inter',sans-serif;
+  font-weight: 700;
+}
+
+h1{
+  @include interBold700();
+}
+h2{
+  @include interBold600();
+}
+h3{
+  @include interBold500();
+}
+p{
+  @include interRegular400();
+}
+
+
+//Colors
+
+/* Color Theme Swatches in Hex */
+$color-primary: #26A639;
+$color-secondary: #068BBF;
+$color-tertiary: #F2BB13;
+$color-light:   #F21D2F;
+$color-accent:  #8065A6;
+$color-text:      #333333; // Cinza escuro para boa legibilidade
+
+//Flex Box
+
+@mixin flex-center($direction) {
+  display: flex;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+//Tags
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a{
+  text-decoration: none;
+}
+
+main{
+  padding: 5rem 0;
+}

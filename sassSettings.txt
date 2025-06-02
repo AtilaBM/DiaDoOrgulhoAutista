@@ -1,0 +1,18 @@
+,
+    "liveSassCompile.settings.includeItems": [
+
+    ],
+    "liveSassCompile.settings.formats": [
+
+        {
+            "format": "compressed",
+            "extensionName": ".css",
+            "savePath": "styles"
+        },
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.wordWrap": "on",
+    "debug.disassemblyView.showSourceCode": false,

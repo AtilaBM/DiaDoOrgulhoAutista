@@ -1,0 +1,45 @@
+@use '../../global/variables' as *;
+
+.card {
+  width:280px;
+  background: $color-tertiary;
+  padding: .4em;
+  border-radius: 6px;
+  text-align: justify;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 6px 6px 0 0;
+
+  img{
+    width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz com que a imagem preencha sem distorcer */
+  display: block;
+  }
+}
+
+.card-image:hover {
+  transform: scale(1.02);
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: $color-accent;
+  padding: 10px 7px 0;
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+.heading {
+  font-weight: 600;
+  color: $color-light;
+  padding: 7px;
+}
