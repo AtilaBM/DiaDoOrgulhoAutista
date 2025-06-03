@@ -1,11 +1,11 @@
-@use '../../global/variables' as *;
+@use "../../global/variables" as *;
 
 .card {
   width: 300px;
-  height: 400px;  
+  height: 400px;
   perspective: 1000px;
   margin: 20px;
-  display: inline-block;  
+  display: inline-block;
 }
 
 .card-inner {
@@ -38,7 +38,7 @@
 }
 
 .card-front {
-  background-color: #fff;
+  
   color: $color-text;
   transform: rotateY(0deg);
 
@@ -51,7 +51,7 @@
   h3 {
     margin: 0;
     font-size: 1.5em;
-    @include comfortaa-400
+    @include comfortaa-400;
   }
 }
 
@@ -62,19 +62,15 @@
   line-height: 1.5;
 
   p {
- 
     text-align: justify;
- 
+
     width: 100%;
- 
+
     margin: 0;
-    
   }
 }
 
- 
- 
-.card:nth-of-type(1) .card-back {  
+.card:nth-of-type(1) .card-back {
   background-color: $color-primary;
 }
 

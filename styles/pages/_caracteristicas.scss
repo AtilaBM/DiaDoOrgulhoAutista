@@ -1,0 +1,49 @@
+@use "../global/variables" as *;
+@use "../global/resete" as *;
+
+.infoTea {
+  @include margin;
+
+  h2{
+    font-size: 3rem;
+  }
+  h3{
+    font-size: 1.5rem;
+    padding: 16px 0;
+  }
+  h2,h3{
+    text-align: center;
+    @include comfortaa-400
+  }
+
+  article {
+    p {
+      text-indent: 1.25cm;
+      @include interRegular400;
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    li {
+      @include interRegular400;
+      font-size: 1.1rem;
+      text-align: justify;
+      padding: 8px 0;
+    }
+  }
+
+  .video-container {
+   
+  width: 640px;  
+  margin: 0 auto;  
+   
+  padding-top: 20px;
+  text-align: center; 
+
+  video{
+    display: block;
+    margin: 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  }
+}
+}

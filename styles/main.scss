@@ -1,12 +1,13 @@
 // Global
 @use './global/resete';
 @use './global/variables';
-
+@use './global/darkMode';
 // Components
 @use './components/button/button';
 @use './components/form/form';
 @use './components/card/card';
-
+@use './components/card/cardFamous';
+@use './components/toggle/toggle';
 // Layout
 @use './layout/header';
 @use './layout/footer';
