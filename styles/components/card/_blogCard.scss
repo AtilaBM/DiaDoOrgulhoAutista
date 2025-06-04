@@ -134,33 +134,4 @@
     }
   }
 
-  body.dark-mode {
-    .card {
-      background: $dark-mode-card-background;
-      box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.4);
-    }
-
-    .card__body {
-      color: $dark-mode-text;
-    }
-
-    .card__body p,
-    .card__body ul,
-    .card__body li {
-      color: $dark-mode-text;
-    }
-
-    .card__body ul li small {
-      color: lighten($dark-mode-text, 10%);
-    }
-
-    .button {
-      background-color: $button-bg-dark;
-      color: $button-text-dark;
-
-      &:hover {
-        background-color: $button-hover-dark;
-      }
-    }
-  }
 }

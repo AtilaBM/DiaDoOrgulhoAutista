@@ -38,7 +38,6 @@
 }
 
 .card-front {
-  
   color: $color-text;
   transform: rotateY(0deg);
 
@@ -62,10 +61,10 @@
   line-height: 1.5;
 
   p {
+    @include interRegular400;
+    font-size: 0.9rem;
     text-align: justify;
-
     width: 100%;
-
     margin: 0;
   }
 }
