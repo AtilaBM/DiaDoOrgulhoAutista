@@ -1,51 +1,43 @@
-@use '../global/variables' as *; // Certifique-se que este é o caminho correto para suas variáveis
-
-// Variáveis de cores adicionais que podem ser úteis para o modo escuro
-// Certifique-se que estas estão no seu _variables.scss
-// $dark-mode-card-background-symbol: #2a2a2a; // Exemplo para fundo dos cards de símbolo
-// $dark-mode-card-border-symbol: #555; // Exemplo para borda dos cards de símbolo
-
+@use "../global/variables" as *;
 
 body {
-  // --- Regras Padrão (Modo Claro) para o BODY e Elementos Gerais ---
   background-color: $light-mode-bg;
   color: $light-mode-text;
   transition: background-color 0.3s ease, color 0.3s ease;
 
-  // Regras de cor padrão para o nav (já devem estar ok se as letras são pretas por padrão)
   nav {
     a {
-      color: $light-mode-text; // Cor padrão dos links da nav
+      color: $light-mode-text;
     }
   }
 
-  // Regras de cor padrão para o footer
   footer {
-    color: $light-mode-text; // Cor padrão do texto do footer no modo claro
+    color: $light-mode-text;
     transition: background-color 0.3s ease, color 0.3s ease;
 
-    // Regras de cor padrão para elementos específicos do footer no modo claro
-    // Títulos do footer (ex: "Quer saber mais?", "Aluno", "Nossas Páginas", "Links Úteis")
-    h1, h2, h3, h4, h5, h6 { // Seleciona todos os títulos dentro do footer
-      color: $light-mode-text; // Cor padrão para títulos no footer (preto/cinza escuro)
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $light-mode-text;
     }
     p {
-      color: $light-mode-text; // Cor padrão para parágrafos no footer
+      color: $light-mode-text;
     }
     .logo-ucb {
-      background-color: transparent; // Fundo transparente para a imagem no modo claro (se ela não tiver fundo)
+      background-color: transparent;
     }
   }
 
-  // --- Regras para o MODO ESCURO (aplicadas quando body tem a classe dark-mode) ---
   &.dark-mode {
-    background-color: $dark-mode-bg; // Fundo do body no modo escuro (#333333)
-    color: $dark-mode-text; // Cor padrão do texto no modo escuro (branco)
+    background-color: $dark-mode-bg;
+    color: $dark-mode-text;
 
-    // Regras para a NAVEGAÇÃO no modo escuro
     nav {
       a {
-        color: $dark-mode-text; // Links da nav ficam brancos no modo escuro
+        color: $dark-mode-text;
         &:hover,
         &:active {
           color: lighten($dark-mode-text, 10%);
@@ -53,139 +45,116 @@ body {
       }
     }
 
-    // Regras para os CARDS da Seção de Símbolos (card-section)
     .card-section .card {
       .card-front {
-        // As cores de background do card-front já são vibrantes e estão no _variables.scss
-        // Elas não mudam no modo escuro, o que é o comportamento esperado.
-        // O texto precisa ser branco.
-        color: $dark-mode-text; // Garante que todo o texto do card-front seja branco
+        color: $dark-mode-text;
         h3 {
-          color: $dark-mode-text; // Apenas para reforçar o H3
+          color: $dark-mode-text;
         }
       }
       .card-back {
-        // Este é o fundo escuro do verso do card de símbolo
-        // O background-color do card-back já é `darken($color-X, 15%)` e está no _variables.scss
-        // O texto deste lado precisa ser o $dark-mode-text (branco) ou $dark-mode-card-back-text (cinza claro).
-        color: $dark-mode-text; // Texto do verso do card de símbolo branco
+        color: $dark-mode-text;
         p {
-          color: $dark-mode-text; // Garante que o parágrafo no verso seja branco
+          color: $dark-mode-text;
         }
       }
     }
 
-    // Regras para os CARDS da Seção de Celebridades (autism-famous-section)
-    // Se eles estão brancos, significa que o background-color não está sendo aplicado corretamente.
-    // As cores de background já estão definidas com darken($color-X, 15%) nos .person-card-back
-    // E os .person-card-front já usam as cores originais. O texto é que precisa ser branco.
     .autism-famous-section .person-card {
       .person-card-front {
-        // O fundo já é vibrante. Apenas garanta que o texto seja branco.
         color: $dark-mode-text;
-        h3, .person-category {
-          color: $dark-mode-text; // Texto da frente do card de celebridade branco
+        h3,
+        .person-category {
+          color: $dark-mode-text;
         }
       }
       .person-card-back {
-        // O fundo já é escuro (darken). Garanta que o texto seja branco.
         color: $dark-mode-text;
         .person-heading {
-          color: $dark-mode-text; // Texto do verso do card de celebridade branco
+          color: $dark-mode-text;
         }
       }
     }
 
-    // Regras para o FOOTER no modo escuro
     footer {
-      background-color: $dark-mode-bg; // Fundo do footer AGORA é $dark-mode-bg (#333333) ou darken para contraste
-      // Se você quer um fundo do footer um pouco mais escuro que o body:
-      // background-color: darken($dark-mode-bg, 5%); 
+      background-color: $dark-mode-bg;
 
-      color: $dark-mode-text; // Todo o texto no footer fica branco
+      color: $dark-mode-text;
 
-      // Títulos do footer (h1, h2, h3, etc.)
-      h1, h2, h3, h4, h5, h6 { // Seleciona todos os títulos dentro do footer
-        color: $dark-mode-text; // Títulos do footer brancos
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $dark-mode-text;
       }
       p {
-        color: $dark-mode-text; // Parágrafos do footer brancos
+        color: $dark-mode-text;
       }
-      // Links dentro do UL do footer
 
-      
-      // Fundo branco para a imagem do logo da UCB
-      .logo-ucb {
-         background-color: #ffffff; // Aplica o fundo branco no container da imagem
-         // Se a imagem tiver transparência, isso fará o "quadrado" branco.
-         // Se o fundo branco já faz parte da imagem PNG/JPG, você pode remover esta linha.
-      }
       ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
-  li {
-    text-align: start;
+        li {
+          text-align: start;
 
-    a {
-      // @include interBold500;
-      color: $dark-mode-text; // Cor padrão para os links do UL
-      text-decoration: none;
-      transition: color 0.3s ease;
-      transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-      transition-duration: 400ms;
-      transition-property: color;
+          a {
+            color: $dark-mode-text;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition-duration: 400ms;
+            transition-property: color;
+          }
+
+          &:nth-child(1) a:hover {
+            color: $color-primary;
+          }
+
+          &:nth-child(2) a:hover {
+            color: $color-secondary;
+          }
+
+          &:nth-child(3) a:hover {
+            color: $color-tertiary;
+          }
+
+          &:nth-child(4) a:hover {
+            color: $color-light;
+          }
+
+          &:nth-child(5) a:hover {
+            color: $color-accent;
+          }
+        }
+      }
+
+      footer header {
+        margin: 0;
+        padding: 0;
+        h2 {
+          color: $light-mode-text;
+        }
+      }
+
+      .link-ucb {
+        padding: 0;
+        margin: 0;
+        display: block;
+      }
+
+      .logo-ucb {
+        padding: 0;
+        margin: 0;
+        width: 150px;
+        max-width: 100%;
+        display: block;
+      }
     }
 
-    &:nth-child(1) a:hover {
-      color: $color-primary;
-    }
-
-    &:nth-child(2) a:hover {
-      color: $color-secondary;
-    }
-
-    &:nth-child(3) a:hover {
-      color: $color-tertiary;
-    }
-
-    &:nth-child(4) a:hover {
-      color: $color-light;
-    }
-
-    &:nth-child(5) a:hover {
-      color: $color-accent;
-    }
-  }
-}
-
-footer header { // Este seletor fora do `footer` principal é problemático. Mova-o para dentro.
-  margin: 0;
-  padding: 0;
-  h2 {
-    // @include comfortaa-400;
-    color: $light-mode-text; // Cor padrão para h2 no footer header
-  }
-}
-
-.link-ucb {
-  padding: 0;
-  margin: 0;
-  display: block;
-}
-
-.logo-ucb { // Este deve ser o container da imagem
-  padding: 0;
-  margin: 0;
-  width: 150px;
-  max-width: 100%;
-  display: block;
-
-}
-    }
-
-    // Regras para outros elementos específicos que você tinha:
     .some-other-element {
       background-color: $dark-mode-card-background;
       border: 1px solid $dark-mode-border-color;
@@ -193,7 +162,3 @@ footer header { // Este seletor fora do `footer` principal é problemático. Mov
     }
   }
 }
-
-// Seu bloco `ul` principal e outros elementos que podem ser estilizados globalmente se não são exclusivos do footer
-// Se `ul` for APENAS para o footer, mova todo este bloco para DENTRO do `footer` principal no modo claro.
-// Se `ul` for para listas em todo o site, mantenha-o aqui e defina as cores padrão.
