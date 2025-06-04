@@ -1,89 +1,81 @@
+// Importações de fontes
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-//Fonts
-
+// Fontes
 @mixin comfortaa-400 {
   font-family: "Comfortaa", sans-serif;
   font-weight: 700;
 }
 
-@mixin interRegular400(){
-  font-family: 'Inter',sans-serif;
+@mixin interRegular400() {
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
-
 }
-@mixin interBold500(){
-  font-family: 'Inter',sans-serif;
+
+@mixin interBold500() {
+  font-family: 'Inter', sans-serif;
   font-weight: 500;
 }
-@mixin interBold600(){
-  font-family: 'Inter',sans-serif;
+
+@mixin interBold600() {
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
 }
-@mixin interBold700(){
-  font-family: 'Inter',sans-serif;
+
+@mixin interBold700() {
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
 }
 
-// h1{
-//   @include interBold700();
-// }
-// h2{
-//   @include interBold600();
-// }
-// h3{
-//   @include interBold500();
-// }
-// p{
-//   @include interRegular400();
-// }
-
-
-//Colors
-
-/* Color Theme Swatches in Hex */
+// Paleta de cores principal
 $color-primary: #26A639;
 $color-secondary: #068BBF;
 $color-tertiary: #F2BB13;
-$color-light:   #F21D2F;
-$color-accent:  #8065A6;
-$color-text:      #333333; // Cinza escuro para boa legibilidade
+$color-light: #F21D2F;
+$color-accent: #8065A6;
+$color-text: #333333;
 
+// Cores do modo claro
+$light-mode-bg: #f5f5f5;
+$light-mode-text: #333333;
+$footer-bg-light: #f0f0f0;
+$card-bg-light-start: #FFFFFF;
+$card-bg-light-end: #ECE9E6;
+$button-bg-light: #007bff;
+$button-text-light: #ffffff;
+$button-hover-light: darken($button-bg-light, 10%);
 
-$light-mode-bg: #f5f5f5; // Fundo do body no modo claro (um cinza bem claro)
-$light-mode-text: #333333; // Cor do texto no modo claro (quase preto)
+// Cores do modo escuro
+$dark-mode-bg: #333333;
+$dark-mode-text: #ffffff;
+$dark-mode-card-back-text: #e0e0e0;
+$dark-mode-card-background: #444444;
+$dark-mode-border-color: #666666;
+$footer-bg-dark: darken($dark-mode-bg, 5%);
+$button-bg-dark: #66b3ff;
+$button-text-dark: #333333;
+$button-hover-dark: lighten($button-bg-dark, 10%);
 
-// Cores para o modo escuro
-$dark-mode-bg: #333333; // Fundo do body no modo escuro (seu #333333)
-$dark-mode-text: #ffffff; // Cor do texto no modo escuro (branco)
-
-// Você também pode querer definir cores para outros elementos que mudam no modo escuro
-// Por exemplo, para cards, bordas, links, etc.
-$dark-mode-card-back-text: #e0e0e0; // Um cinza claro para texto em fundos escuros, se necessário
-$dark-mode-card-background: #444444; // Um fundo para cards no modo escuro
-$dark-mode-border-color: #666666; // Cor de bordas no modo escuro
-//Flex Box
-
+// Utilitários de layout
 @mixin flex-center($direction) {
   display: flex;
   justify-content: center;
   flex-direction: $direction;
 }
 
-//Tags
-
-body{
+// Tags globais
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-a{
+a,li {
+  list-style: none;
   text-decoration: none;
 }
 
-main{
+main {
   padding: 5rem 0;
 }

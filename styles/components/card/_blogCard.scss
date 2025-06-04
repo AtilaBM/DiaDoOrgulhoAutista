@@ -1,0 +1,166 @@
+@use "../../global/variables" as *;
+@use "../../global/resete" as *;
+
+.blog {
+  @include margin;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin-block: 2rem;
+    gap: 2rem;
+  }
+
+  img {
+    height: 400px;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .card {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    width: 25rem;
+    overflow: hidden;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    padding: 1rem;
+
+    background: $card-bg-light-start;
+    background: linear-gradient(
+      to right,
+      $card-bg-light-start,
+      $card-bg-light-end
+    );
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card__body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: $light-mode-text;
+    transition: color 0.3s ease;
+  }
+
+  .tag {
+    align-self: flex-start;
+    padding: 0.25em 0.75em;
+    border-radius: 1em;
+    font-size: 0.75rem;
+    color: #fafafa;
+  }
+
+  .card__body h4 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
+
+  .card__body p,
+  .card__body ul,
+  .card__body li {
+    text-align: justify;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: $light-mode-text;
+    transition: color 0.3s ease;
+  }
+
+  .card__body ul {
+    list-style-type: disc;
+    margin-left: 1.25rem;
+    padding-left: 0;
+  }
+
+  .card__body ul li {
+    margin-bottom: 0.25rem;
+  }
+
+  .card__body ul li strong {
+    font-weight: bold;
+  }
+
+  .card__body ul li small {
+    font-size: 0.85rem;
+    color: darken($light-mode-text, 10%);
+    transition: color 0.3s ease;
+  }
+
+  .card__footer {
+    display: flex;
+    padding: 1rem;
+    margin-top: auto;
+    justify-content: center;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    border-radius: 0.5em;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+    white-space: nowrap;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .container .card:nth-child(1) .button {
+    background-color: $color-primary;
+    color: white;
+    &:hover {
+      background-color: darken($color-primary, 10%);
+    }
+  }
+
+  .container .card:nth-child(2) .button {
+    background-color: $color-secondary;
+    color: white;
+    &:hover {
+      background-color: darken($color-secondary, 10%);
+    }
+  }
+
+  .container .card:nth-child(3) .button {
+    background-color: $color-tertiary;
+    color: white;
+    &:hover {
+      background-color: darken($color-tertiary, 10%);
+    }
+  }
+
+  body.dark-mode {
+    .card {
+      background: $dark-mode-card-background;
+      box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.4);
+    }
+
+    .card__body {
+      color: $dark-mode-text;
+    }
+
+    .card__body p,
+    .card__body ul,
+    .card__body li {
+      color: $dark-mode-text;
+    }
+
+    .card__body ul li small {
+      color: lighten($dark-mode-text, 10%);
+    }
+
+    .button {
+      background-color: $button-bg-dark;
+      color: $button-text-dark;
+
+      &:hover {
+        background-color: $button-hover-dark;
+      }
+    }
+  }
+}

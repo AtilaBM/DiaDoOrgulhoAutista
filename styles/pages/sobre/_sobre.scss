@@ -1,15 +1,13 @@
-@use "../global/variables" as *;
-@use "../global/resete" as *;
+@use "../../global/variables" as *;
+@use "../../global/resete" as *;
 
 .sobreSection {
-  // border: 1px solid black;
   @include margin;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   div {
-    // border: 1px solid black;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -30,7 +28,6 @@
     }
   }
   img {
-    // border: 1px solid black;
     width: 50%;
     height: auto;
     margin: 20px 0;

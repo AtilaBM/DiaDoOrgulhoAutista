@@ -89,13 +89,16 @@
 }
 
 .person-category {
-  font-size: 1.1em;
+  @include comfortaa-400;
+  font-size: 1.25em;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .person-heading {
-  font-size: 0.95em;
+  @include interRegular400;
+  font-size: 0.9rem;
+  text-align: justify;
 }
 
 /* Cores específicas para cada card, ciclando pelas 5 cores originais */

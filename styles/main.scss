@@ -2,20 +2,22 @@
 @use './global/resete';
 @use './global/variables';
 @use './global/darkMode';
+
 // Components
-@use './components/button/button';
-@use './components/form/form';
+
 @use './components/card/card';
 @use './components/card/cardFamous';
+@use './components/card/blogCard';
 @use './components/toggle/toggle';
+
 // Layout
 @use './layout/header';
 @use './layout/footer';
 
 // Pages
 
-@use './pages/inicio';
-@use './pages/caracteristicas';
-@use './pages/celebridades';
-@use './pages/eventos';
-@use './pages/sobre';
+@use './pages/inicio/inicio';
+@use './pages/informacoes/informacoes';
+@use './pages/sobre/sobre';
+@use './pages/celebridades/celebridades';
+@use './pages/caracteristicas/caracteristicas';

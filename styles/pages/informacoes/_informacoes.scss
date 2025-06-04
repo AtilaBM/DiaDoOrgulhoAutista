@@ -1,0 +1,128 @@
+@use "../../global/variables" as *;
+@use "../../global/resete" as *;
+
+section {
+  @include margin;
+}
+.eventsTEA {
+  article {
+    margin: 20px 0;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 15px 0;
+  }
+  h3,
+  p,
+  li,
+  a {
+    @include interRegular400;
+    font-size: 1.1rem;
+  }
+  h2,
+  h3 {
+    @include comfortaa-400;
+  }
+}
+
+.vagas {
+  article {
+    text-align: justify;
+
+    h3 {
+      padding: 8px 0;
+    }
+
+    a {
+      @include comfortaa-400;
+      padding: 5px 8px;
+      margin: 8px 0;
+      display: inline-block;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      position: relative;
+      border: none;
+      background: none;
+      text-transform: uppercase;
+      transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition-duration: 400ms;
+      transition-property: color, background-color;
+    }
+
+    &:nth-child(1) a {
+      background-color: $color-primary;
+      color: white;
+    }
+    &:nth-child(2) a {
+      background-color: $color-secondary;
+      color: white;
+    }
+    &:nth-child(3) a {
+      background-color: $color-tertiary;
+      color: white;
+    }
+    &:nth-child(4) a {
+      background-color: $color-light;
+      color: white;
+    }
+    &:nth-child(5) a {
+      background-color: $color-accent;
+      color: white;
+    }
+    &:nth-child(6) a {
+      background-color: $color-primary;
+      color: white;
+    }
+    &:nth-child(7) a {
+      background-color: $color-secondary;
+      color: white;
+    }
+
+    &:nth-child(1) a:hover {
+      color: white;
+      background-color: darken($color-primary, 10%);
+      &:after {
+        background-color: darken($color-primary, 10%);
+      }
+    }
+    &:nth-child(2) a:hover {
+      color: white;
+      background-color: darken($color-secondary, 10%);
+      &:after {
+        background-color: darken($color-secondary, 10%);
+      }
+    }
+    &:nth-child(3) a:hover {
+      color: white;
+      background-color: darken($color-tertiary, 10%);
+      &:after {
+        background-color: darken($color-tertiary, 10%);
+      }
+    }
+    &:nth-child(4) a:hover {
+      color: white;
+      background-color: darken($color-light, 10%);
+      &:after {
+        background-color: darken($color-light, 10%);
+      }
+    }
+    &:nth-child(5) a:hover {
+      color: white;
+      background-color: darken($color-accent, 10%);
+      &:after {
+        background-color: darken($color-accent, 10%);
+      }
+    }
+    &:nth-child(6) a:hover {
+      color: white;
+      background-color: darken($color-primary, 10%);
+      &:after {
+        background-color: darken($color-primary, 10%);
+      }
+    }
+  }
+}
