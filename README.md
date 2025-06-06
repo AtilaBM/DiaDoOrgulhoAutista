@@ -17,4 +17,4 @@ Este site tem como propósito celebrar o **Dia do Orgulho Autista (18 de junho)*
 Você pode acessar o projeto hospedado no Vercel através do link abaixo:
 
 🔗
-https://dia-do-orgulho-autista-vercel-2ileg0bul.vercel.app
+https://dia-do-orgulho-autista-vercel.vercel.app/
