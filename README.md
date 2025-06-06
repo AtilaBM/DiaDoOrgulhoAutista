@@ -12,3 +12,9 @@ Este site tem como propósito celebrar o **Dia do Orgulho Autista (18 de junho)*
 - SCSS (Sass)  
 - CSS3  
 
+## 🌐 Acesse o site
+
+Você pode acessar o projeto hospedado no Vercel através do link abaixo:
+
+🔗
+https://dia-do-orgulho-autista-vercel-2ileg0bul.vercel.app
