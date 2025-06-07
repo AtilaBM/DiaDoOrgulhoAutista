@@ -10,7 +10,7 @@ Este site tem como propósito celebrar o **Dia do Orgulho Autista (18 de junho)*
 
 - HTML5  
 - SCSS (Sass)  
-- CSS3  
+- JavaScript 
 
 ## 🌐 Acesse o site
 
