@@ -1,7 +1,9 @@
-@use './variables' as *;
+@use './variables';
 
-
-
+@mixin margin {
+  margin-right: 15%;
+  margin-left: 15%;
+}
 
 /* 1. Use a more-intuitive box-sizing model */
 *,
@@ -24,7 +26,6 @@
 }
 
 body {
-  height: 100%;
   /* 4. Add accessible line-height */
   line-height: 1.5;
   /* 5. Improve text rendering */

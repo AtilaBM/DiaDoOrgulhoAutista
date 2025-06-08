@@ -2,8 +2,9 @@
 
 button {
   font-size: 18px;
-  color: $color-light;
-  @include interBold700;
+  color: $color-primary;
+  font-family: inherit;
+  font-weight: 800;
   cursor: pointer;
   position: relative;
   border: none;
@@ -16,8 +17,7 @@ button {
 
 button:focus,
 button:hover {
-  color: $color-light;
-  
+  color: $color-tertiary;
 }
 
 button:focus:after,
@@ -34,7 +34,7 @@ button:after {
   position: absolute;
   width: 0%;
   height: 2px;
-  background-color: $color-light;
+  background-color: $color-tertiary;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: width, left;
