@@ -19,4 +19,4 @@ Você pode acessar o projeto hospedado no Vercel através do link abaixo:
 🔗
 https://dia-do-orgulho-autista-vercel.vercel.app/
 
-⚠️ **Nota:** Este site **não é responsivo**. Para a melhor visualização, recomenda-se utilizá-lo em **desktops, notebooks ou telas maiores**.
+##⚠️ **Nota:** Este site **não é responsivo**. Para a melhor visualização, recomenda-se utilizá-lo em **desktops, notebooks ou telas maiores**.
