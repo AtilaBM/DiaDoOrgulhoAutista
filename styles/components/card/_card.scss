@@ -1,49 +1,82 @@
-.cards {
+@use "../../global/variables" as *;
+
+.card {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  margin: 20px;
+  display: inline-block;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 20px;
   display: flex;
-  flex-direction: row;
-  gap: 15px;
-}
-
-.cards .red {
-  background-color: #007e9e;
-}
-
-.cards .blue {
-  background-color: #0062ff;
-}
-
-.cards .green {
-  background-color: #18cd5e;
-}
-
-.cards .card {
-  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   text-align: center;
-  height: 100px;
-  width: 100px;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-  transition: 400ms;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.cards .card p.tip {
-  font-size: 1em;
-  font-weight: 700;
+.card-front {
+  color: $color-text;
+  transform: rotateY(0deg);
+
+  img {
+    max-width: 80%;
+    max-height: 150px;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.5em;
+    @include comfortaa-400;
+  }
 }
 
-.cards .card p.second-text {
-  font-size: .7em;
+.card-back {
+  color: #fff;
+  transform: rotateY(180deg);
+  font-size: 0.9em;
+  line-height: 1.5;
+
+  p {
+    @include interRegular400;
+    font-size: 0.9rem;
+    text-align: justify;
+    width: 100%;
+    margin: 0;
+  }
 }
 
-.cards .card:hover {
-  transform: scale(1.2, 1.2);
+.card:nth-of-type(1) .card-back {
+  background-color: $color-primary;
 }
 
-.cards:hover > .card:not(:hover) {
-  filter: blur(10px);
-  transform: scale(0.9, 0.9);
+.card:nth-of-type(2) .card-back {
+  background-color: $color-secondary;
+}
+
+.card:nth-of-type(3) .card-back {
+  background-color: $color-tertiary;
 }
